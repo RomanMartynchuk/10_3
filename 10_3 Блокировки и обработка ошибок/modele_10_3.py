@@ -14,8 +14,8 @@ class Bank:
             self.balance += admission
             print(f"Пополнение: {admission}. Баланс: {self.balance}")
             sleep(0.001)
-        if self.balance >= 500 and self.lock.locked():
-            self.lock.release()
+            if self.balance >= 500 and self.lock.locked():
+                self.lock.release()
 
     def take(self):
         for i in range(self.transactions):
